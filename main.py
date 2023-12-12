@@ -1,16 +1,22 @@
+from typing import Final
+
 import pandas as pd
 import numpy as np
 import seaborn as sb
 import matplotlib as mpl
+import augment as ag
 
 import os
 
+NUM_OF_ROTATIONS : Final[int] = 4
+
 def fn(dir):
-    num_of_files = 0
     for root, subdirs, files in os.walk(dir):
         if len(files) != 0:
-            num_of_files += len(files)
+            for f in files:
+                ag.rotateImg(os.path.join(root, os.path.basename(f)), NUM_OF_ROTATIONS)
 
-    return num_of_files
+if os.path.isdir("new") == False:
+        os.mkdir("new")
 
 fn("lfw")
