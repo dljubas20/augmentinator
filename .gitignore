@@ -1,3 +1,5 @@
 lfw/**/*
+lfw-copy/**/*
+data/**/*
 __pycache__/**/*
 new/**/*
