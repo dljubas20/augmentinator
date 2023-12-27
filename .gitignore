@@ -1,0 +1,8 @@
+lfw/**/*
+lfw-copy/**/*
+data/**/*
+__pycache__/**/*
+new/**/*
+svm/dataset*
+svm/models/
+svm/test-data/
